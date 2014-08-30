@@ -16,16 +16,16 @@
             '<(EXT_BOOST)/include',
         ],
         'target_conditions': [
-            ['_type=="executable"', {
+            ['_type=="executable" and OS!="win"', {
                 'cflags': ['-fPIC'],
                 'library_dirs': [
                     '<(EXT_BOOST)/lib',
                 ],
             }],
-            ['_type=="static_library"', {
+            ['_type=="static_library" and OS!="win"', {
                 'standalone_static_library': 1, # for ar using alink (ar crs) rather than alink_thin
             }],
-            ['_type=="shared_library"', {
+            ['_type=="shared_library" and OS!="win"', {
                 'cflags': ['-fPIC'],
                 'library_dirs': [
                     '<(EXT_BOOST)/lib',
@@ -218,6 +218,7 @@
                             'VCLinkerTool': {
                                 'AdditionalLibraryDirectories': [
                                     '<(EXT_CPPUNIT)/lib/<(VCVER)',
+                                    '<(EXT_BOOST)/lib',
                                 ],
                                 'AdditionalDependencies': [
                                     'cppunit.lib',
@@ -231,6 +232,7 @@
                             'VCLinkerTool': {
                                 'AdditionalLibraryDirectories': [
                                     '<(EXT_CPPUNIT)/lib/<(VCVER)',
+                                    '<(EXT_BOOST)/lib',
                                 ],
                                 'AdditionalDependencies': [
                                     'cppunitsd.lib',
@@ -244,6 +246,7 @@
                             'VCLinkerTool': {
                                 'AdditionalLibraryDirectories': [
                                     '<(EXT_CPPUNIT)/lib/<(VCVER)',
+                                    '<(EXT_BOOST)/lib',
                                 ],
                                 'AdditionalDependencies': [
                                     'cppunits.lib',
@@ -257,6 +260,7 @@
                             'VCLinkerTool': {
                                 'AdditionalLibraryDirectories': [
                                     '<(EXT_CPPUNIT)/lib/<(VCVER)/x64',
+                                    '<(EXT_BOOST)/lib/x64',
                                 ],
                                 'AdditionalDependencies': [
                                     'cppunitd.lib',
@@ -270,6 +274,7 @@
                             'VCLinkerTool': {
                                 'AdditionalLibraryDirectories': [
                                     '<(EXT_CPPUNIT)/lib/<(VCVER)/x64',
+                                    '<(EXT_BOOST)/lib/x64',
                                 ],
                                 'AdditionalDependencies': [
                                     'cppunit.lib',
@@ -283,6 +288,7 @@
                             'VCLinkerTool': {
                                 'AdditionalLibraryDirectories': [
                                     '<(EXT_CPPUNIT)/lib/<(VCVER)/x64',
+                                    '<(EXT_BOOST)/lib/x64',
                                 ],
                                 'AdditionalDependencies': [
                                     'cppunitsd.lib',
@@ -296,6 +302,7 @@
                             'VCLinkerTool': {
                                 'AdditionalLibraryDirectories': [
                                     '<(EXT_CPPUNIT)/lib/<(VCVER)/x64',
+                                    '<(EXT_BOOST)/lib/x64',
                                 ],
                                 'AdditionalDependencies': [
                                     'cppunits.lib',
