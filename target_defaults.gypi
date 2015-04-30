@@ -64,7 +64,7 @@
                                 'WarnAsError': 'false',
                                 'BufferSecurityCheck': 'false',
                                 'MinimalRebuild': 'true',
-                                'ProgramDataBaseFileName': '$(TargetDir)/$(ProgramName).pdb',
+                                'ProgramDataBaseFileName': '$(OutDir)/$(ProjectName).pdb',
                                 'PreprocessorDefinitions' : [
                                     '_CRT_SECURE_NO_WARNINGS',
                                     '_WIN32_WINNT=0x0501',
@@ -75,7 +75,7 @@
                                     'VCLinkerTool': {
                                     'GenerateDebugInformation': 'true',
                                     'LinkIncremental': '2',
-                                    'ProgramDatabaseFile': '$(TargetDir)/$(ProgramName).pdb',
+                                    'ProgramDatabaseFile': '$(OutDir)/$(ProjectName).pdb',
                                     'SubSystem': '1',
                                     'RandomizedBaseAddress': '1',
                                     'DataExecutionPrevention': '0',
@@ -85,7 +85,7 @@
                                     'VCLinkerTool': {
                                     'GenerateDebugInformation': 'true',
                                     'LinkIncremental': '2',
-                                    'ProgramDatabaseFile': '$(TargetDir)/$(ProgramName).pdb',
+                                    'ProgramDatabaseFile': '$(OutDir)/$(ProjectName).pdb',
                                     'SubSystem': '1',
                                     'RandomizedBaseAddress': '1',
                                     'DataExecutionPrevention': '0',
